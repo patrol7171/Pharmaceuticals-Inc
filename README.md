@@ -25,6 +25,21 @@ num_of_target_drugs = len(target_drugs)
 ```
 
 
+```python
+#Disable autoscrolling for images or graphs
+%%javascript
+IPython.OutputArea.prototype._should_scroll = function(lines) {
+    return false;
+}
+```
+
+
+      File "<ipython-input-7-63efbedb1faf>", line 2
+        %%javascript
+        ^
+    SyntaxError: invalid syntax
+    
+
 
 
 ```python
@@ -789,6 +804,8 @@ for i in range(num_of_target_drugs - 1):
     vol_list = list((target_drugs_tumor_vol_mean_df.as_matrix(columns=target_drugs_tumor_vol_mean_df.columns[i+1:i+2])).flatten())
     drug_group_mean_vol = np.vstack([drug_group_mean_vol, vol_list])
     
+#print('------------------------------------------------------------------------')
+#print(drug_group_mean_vol)
 ```
 
               Tumor Volume (mm3)                                 
@@ -818,6 +835,8 @@ for i in range(num_of_target_drugs - 1):
     vol_list2 = list((target_drugs_tumor_vol_sem_df.as_matrix(columns=target_drugs_tumor_vol_sem_df.columns[i+1:i+2])).flatten())
     drug_group_sem_vol = np.vstack([drug_group_sem_vol, vol_list2])
 
+#print('---------------------------------------------------------------------')
+#print(drug_group_sem_vol)
 ```
 
               Tumor Volume (mm3)                              
@@ -872,7 +891,7 @@ plt.show()
 ```
 
 
-![png](output_14_0.png)
+![png](Images/output_14_0.png)
 
 
 <br>
@@ -1355,7 +1374,7 @@ plt.show()
 ```
 
 
-![png](output_21_0.png)
+![png](Images/output_21_0.png)
 
 
 <br>
@@ -1619,7 +1638,7 @@ plt.show()
 ```
 
 
-![png](output_26_0.png)
+![png](Images/output_26_0.png)
 
 
 <br>
@@ -1681,5 +1700,5 @@ plt.show()
 ```
 
 
-![png](output_29_0.png)
+![png](Images/output_29_0.png)
 
